@@ -22,3 +22,12 @@ Route::get('/home', 'HomeController@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('/admin', function()
+{
+   // echo "test";
+    return view('admin.index');
+});
+
+Route::resource('admin/users', 'AdminUsersController');
